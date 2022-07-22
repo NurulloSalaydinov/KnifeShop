@@ -5,14 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Knife Shop</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" >
 </head>
 <body>
+	<!-- header -->
 	<header>
 		<nav>
-			<div class="navbar-brand">
+			<a href="#" class="navbar-brand">
 				Knife Shop
+			</a>
+			<div class="navbar-burger" id="navbar-burger">
+				<span></span>
 			</div>
-			<ul class="navbar-menu">
+			<ul class="navbar-menu" id="navbar-menu">
 				<li class="navbar-item">
 					<a href="#" class="navbar-link">Home</a>
 				</li>
@@ -28,9 +33,13 @@
 				<li class="navbar-item">
 					<a href="#" class="navbar-link">Contact</a>
 				</li>
+				<li class="navbar-bottom-bar" id="animation-bar"></li>
 			</ul>
 			<div class="navbar-end">
 				<div class="ico">
+					<a href="#" class="visible-mobile">
+						<img src="img/icons/home.svg" alt="">
+					</a>
 					<a href="#">
 						<img src="img/icons/search.svg" alt="Search Icon">
 					</a>
@@ -43,8 +52,67 @@
 				</div>
 			</div>
 		</nav>
-	</header>
 
+		<div class="header-content">
+			<div class="container">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<!-- slide -->
+						<div class="swiper-slide">
+							<div class="col-first text-dark">
+								<h1>
+									<span class="text-light">The Best Knives</span>
+									<br> From Uzbek Artisans
+									<br> <span class="text-light">Choose your own !</span>
+								</h1>
+								<button class="btn-outline-light">Buy</button>
+							</div>
+							<div class="col-second">
+								<img src="img/product.png" alt="">
+							</div>
+						</div>
+						<!-- end slide -->
+						<!-- slide -->
+						<div class="swiper-slide">
+							<div class="col-first text-dark">
+								<h1>
+									<span class="text-light">The Best Knives</span>
+									<br> From Uzbek Artisans
+									<br> <span class="text-light">Choose your own !</span>
+								</h1>
+								<button class="btn-outline-light">Buy</button>
+							</div>
+							<div class="col-second">
+								<img src="img/product-2.png" alt="">
+							</div>
+						</div>
+						<!-- end slide -->
+						<!-- slide -->
+						<div class="swiper-slide">
+							<div class="col-first text-dark">
+								<h1>
+									<span class="text-light">The Best Knives</span>
+									<br> From Uzbek Artisans
+									<br> <span class="text-light">Choose your own !</span>
+								</h1>
+								<button class="btn-outline-light">Buy</button>
+							</div>
+							<div class="col-second">
+								<img src="img/product-3.png" alt="">
+							</div>
+						</div>
+						<!-- end slide -->
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				
+			</div>
+		</div>
+	</header>
+	<!-- end header -->
+
+
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
