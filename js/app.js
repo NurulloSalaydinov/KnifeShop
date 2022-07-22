@@ -42,11 +42,22 @@ HeaderContentAnimation();
 
 const swiper = new Swiper('.swiper', {
   direction: 'vertical',
+  grabCursor: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
     renderBullet: function (index, className) {
-      return `<span class="dot swiper-pagination-bullet">${index+1}</span>`;
+      return `<span class="dot swiper-pagination-bullet">0${index+1}</span>`;
     },
   },
+});
+
+
+window.addEventListener('scroll', (e) => {
+	if (window.scrollY > 30) {
+		document.querySelector('nav').classList.add('scrolled');
+	}
+	else {
+		document.querySelector('nav').classList.remove('scrolled');
+	}
 });
