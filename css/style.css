@@ -10,6 +10,11 @@
 	font-family: sans-serif;
 }
 
+body {
+	/*background: #eee;*/
+	background: conic-gradient(from 180deg at 50% 0%, #8FF8FF 0deg, #8FFF9B 360deg);
+}
+
 header {
 	width: 100%;
 	height: 100vh;
@@ -281,7 +286,7 @@ header .header-content .swiper .swiper-pagination .swiper-pagination-bullet-acti
 }
 
 .product-wrapper .product .stretched-img img {
-	width: 50%;
+	width: 90%;
 	max-height: 200px;
 	min-height: 200px;
 	object-fit: contain;
@@ -398,6 +403,57 @@ header .header-content .swiper .swiper-pagination .swiper-pagination-bullet-acti
 	height: 20px;
 }
 
+/* footer */
+footer {
+	width: 100%;
+	height: auto;
+	display: flex;
+	padding: 20px;
+	color: #fff;
+	flex-wrap: wrap;
+	background: #303030;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+
+footer div:nth-child(1) {
+	width: 250px;
+}
+
+footer .footer-brand {
+	color: #fff;
+	font-size: 30px;
+	font-family: 'Oleo Script', cursive;
+}
+
+footer .footer-title {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+footer .footer-link {
+	opacity: 0.7;
+	margin: 15px 0;
+	display: block;
+	color: #fff;
+}
+
+footer p {
+	margin: 10px 0;
+	font-size: 20px;
+}
+
+footer .footer-link:hover {
+	opacity: 1;
+}
+
+footer svg {
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+}
+
 @media screen and (max-width: 1125px) {
 	.services-block .service-card {
 		width: calc(100% / 2);
@@ -471,6 +527,15 @@ header .header-content .swiper .swiper-pagination .swiper-pagination-bullet-acti
 	}
 	.submit-btn {
 		width: 100%;
+	}
+	footer {
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 70px;
+	}
+	footer .footer-content {
+		width: 100%;
+		margin: 10px 0;
 	}
 }
 
