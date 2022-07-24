@@ -49,15 +49,17 @@ window.addEventListener('scroll', (e) => {
 
 const HeaderContentAnimation = () => {
 	let headerContent = document.querySelector('.header-content');
-	let colors = ['#855FA8', '#AD2529', '#62BFC4', '#FF6A00'];
-	let colorIndex = 0;
-	setInterval(() => {
-		colorIndex += 1;
-		if (colorIndex == colors.length) {
-			colorIndex = 0;
-		};
-		headerContent.style.backgroundColor = colors[colorIndex];
-	}, 5000);
+	if (headerContent) {
+		let colors = ['#855FA8', '#62BFC4', '#FF6A00'];
+		let colorIndex = 0;
+		setInterval(() => {
+			colorIndex += 1;
+			if (colorIndex == colors.length) {
+				colorIndex = 0;
+			};
+			headerContent.style.backgroundColor = colors[colorIndex];
+		}, 5000);
+	}
 };
 
 HeaderContentAnimation();
