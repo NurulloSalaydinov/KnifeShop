@@ -466,6 +466,7 @@ footer .footer-link {
 	margin: 15px 0;
 	display: block;
 	color: #fff;
+	position: relative;
 }
 
 footer p {
@@ -475,6 +476,20 @@ footer p {
 
 footer .footer-link:hover {
 	opacity: 1;
+}
+
+footer .footer-link::before {
+	top: -3px;
+	opacity: 0;
+	left: -35px;
+	content: "⚪️";
+	position: absolute;
+	transition: all 0.4s;
+}
+
+footer .footer-link:hover::before {
+	opacity: 1;
+	left: -25px;
 }
 
 footer svg {
