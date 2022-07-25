@@ -23,7 +23,7 @@ const NavbarAnimation = () => {
 	});
 };
 
-NavbarAnimation();
+// NavbarAnimation();
 
 const swiper = new Swiper('.swiper', {
   direction: 'vertical',

@@ -91,13 +91,16 @@ header nav .navbar-menu .navbar-item .navbar-link:hover {
 header nav .navbar-menu .navbar-bottom-bar {
 	left: 0;
 	bottom: 5px;
-	width: 40px;
+	width: 462px;
 	height: 5px;
 	z-index: -11;
-	display: none;
 	border-radius: 10px;
 	background: #fff;
 	position: absolute;
+}
+
+header nav .navbar-menu .navbar-item:hover ~ .navbar-bottom-bar {
+	background: #ffc;
 }
 
 header nav .navbar-end {
@@ -122,12 +125,25 @@ header nav .navbar-burger {
 }
 
 header nav .navbar-burger span:nth-child(1) {
-	top: -2px;
+	top: -8px;
 	right: -60px;
 	width: 30px;
 	height: 4px;
 	position: absolute;
 	background: #303030;
+}
+
+header nav .navbar-burger span:nth-child(2) {
+	top: 3px;
+	right: -60px;
+	width: 30px;
+	height: 4px;
+	position: absolute;
+	background: #303030;
+}
+
+header nav .navbar-burger.active span {
+	top: -2px
 }
 
 header .header-content {
@@ -491,10 +507,20 @@ footer svg {
 		height: calc(100vh - 60px);
 	}
 	header nav .navbar-menu .navbar-item {
-		display: block;
+		padding: 0;
 		height: auto;
+		display: block;
+		margin: 0 !important;
+	}
+	header nav .navbar-menu .navbar-item .navbar-link {
+		height: auto;
+		display: block;
+		margin: 0 !important;
 		padding: 20px 20px;
 		box-shadow: -1px 5px 11px -2px rgba(0,0,0,0.6);
+	}
+	header nav .navbar-menu .navbar-item .navbar-link:hover {
+		text-indent: 15px;
 	}
 	header nav .navbar-burger {
 		display: block;
@@ -521,6 +547,9 @@ footer svg {
 	}
 	header .header-content .swiper .swiper-wrapper .swiper-slide div {
 		width: 100%;
+	}
+	header nav .navbar-menu .navbar-bottom-bar {
+		display: none;
 	}
 	.services-block .service-card {
 		width: 100%;
