@@ -1,0 +1,61 @@
+header {
+    height: auto
+}
+
+nav {
+    background: #303030 !important;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../img/bg.png");
+}
+
+.banner * {
+    margin: 10px 0;
+}
+
+.single-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-product .single-product-image-swipe {
+    width: 35%;
+}
+
+.single-product .single-product-image-swipe .mySwiper2 .swiper-wrapper .swiper-slide {
+    background: #f7f7f7;
+}
+
+.single-product .single-product-image-swipe .swiper img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.single-product .single-product-image-swipe .mySwiper .swiper-wrapper {
+    display: flex;
+    padding: 15px 0;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-product .single-product-image-swipe .mySwiper img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.single-product .single-product-content {
+    width: 65%;
+}

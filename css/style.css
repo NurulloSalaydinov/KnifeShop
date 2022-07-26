@@ -14,7 +14,7 @@ body {
 	width: 100%;
 	height: auto;
 	overflow-x: hidden;
-	background: #F2F4F5;
+	background: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -86,21 +86,6 @@ header nav .navbar-menu .navbar-item .navbar-link {
 
 header nav .navbar-menu .navbar-item .navbar-link:hover {
 	color: #ffc;
-}
-
-header nav .navbar-menu .navbar-bottom-bar {
-	left: 0;
-	bottom: 5px;
-	width: 462px;
-	height: 5px;
-	z-index: -11;
-	border-radius: 10px;
-	background: #fff;
-	position: absolute;
-}
-
-header nav .navbar-menu .navbar-item:hover ~ .navbar-bottom-bar {
-	background: #ffc;
 }
 
 header nav .navbar-end {
@@ -498,6 +483,16 @@ footer svg {
 	margin: 0 5px;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.is-size-3 {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 30px;
+}
+
 @media screen and (max-width: 1125px) {
 	.services-block .service-card {
 		width: calc(100% / 2);
@@ -562,9 +557,6 @@ footer svg {
 	}
 	header .header-content .swiper .swiper-wrapper .swiper-slide div {
 		width: 100%;
-	}
-	header nav .navbar-menu .navbar-bottom-bar {
-		display: none;
 	}
 	.services-block .service-card {
 		width: 100%;
