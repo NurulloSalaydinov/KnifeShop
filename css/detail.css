@@ -23,16 +23,21 @@ nav {
 
 .single-product {
     display: flex;
-    align-items: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .single-product .single-product-image-swipe {
-    width: 35%;
+    width: 55%;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5)
 }
 
 .single-product .single-product-image-swipe .mySwiper2 .swiper-wrapper .swiper-slide {
     background: #f7f7f7;
+    padding: 20px 30px;
+    cursor: zoom-in;
 }
 
 .single-product .single-product-image-swipe .swiper img {
@@ -44,18 +49,223 @@ nav {
 .single-product .single-product-image-swipe .mySwiper .swiper-wrapper {
     display: flex;
     padding: 15px 0;
-    background: #000;
+    background: #bbb;
     align-items: center;
     justify-content: center;
 }
 
 .single-product .single-product-image-swipe .mySwiper img {
     width: 100px;
-    height: 100px;
+    height: auto;
+    padding: 10px;
     cursor: pointer;
     object-fit: contain;
+    border: 1px solid #000;
 }
 
 .single-product .single-product-content {
-    width: 65%;
+    width: 45%;
+    padding: 0 30px;
+}
+
+.single-product .single-product-content .add-content {
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5),
+    0 3px 5px rgba(0,0,0,0.5)
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    margin: 5px 0;
+    background: #000;
+}
+
+.img-viewer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    z-index: 1111;
+    cursor: zoom-out;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.8);
+}
+
+.img-viewer img {
+    width: 700px;
+    height: auto;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.select-content {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.select-content select {
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid blue;
+    padding: 4px 35px 4px 5px;
+}
+
+.select-content label {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+input, button, a, select, label {
+    cursor: pointer;
+}
+
+.select-content label input {
+    width: 30px;
+    height: 30px;
+    padding: 20px 0;
+}
+
+.cart-btn {
+    width: 100%;
+    color: #fff;
+    display: block;
+    margin: 20px 0;
+    padding: 10px 0;
+    text-align: center;
+    background: orange;
+    border: 1px solid orange;
+}
+
+.cart-btn:hover {
+    color: orange;
+    border: 1px solid orange;
+    background: transparent;
+}
+
+.wishlist-btn {
+    width: 100%;
+    color: #fff;
+    display: block;
+    margin: 20px 0;
+    padding: 10px 0;
+    text-align: center;
+    background: #000;
+    border: 1px solid #000;
+}
+
+.wishlist-btn:hover {
+    color: #000;
+    border: 1px solid #000;
+    background: transparent;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    margin: 30px 0;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid #303030;
+}
+
+.tabs::before {
+    bottom: -20px;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: gray;
+    position: absolute;
+}
+
+.tabs .tab {
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 10px;
+    color: #303030;
+    cursor: pointer;
+}
+
+.tabs .tab.active {
+    color: #fff;
+    background: #303030;
+}
+
+.specific table {
+    width: 100%;
+    border: none
+}
+
+.specific table tr td {
+    padding: 10px 5px !important;
+}
+
+.specific table tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+.review {
+    gap: 30px;
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between
+}
+
+.review .review-content {
+    height: auto;
+    padding: 25px;
+    border-radius: 5px;
+    width: calc(100% / 2);
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.review .review-content .review-bar {
+    padding: 10px 0;
+    border-bottom: 1px solid #303030;
+}
+
+.review .review-form {
+    width: 50%;
+}
+
+.review .review-form input {
+    width: 100%;
+    height: 40px;
+    text-indent: 10px;
+    margin-bottom: 14px;
+    border: none;
+    border-bottom: 1px solid #303030;
+}
+
+@media screen and (max-width: 992px) {
+    .single-product .single-product-image-swipe {
+        width: 100%;
+    }
+    .single-product .single-product-content {
+        width: 100%;
+        padding: 0;
+        margin: 15px 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .select-content {
+        flex-direction: column;
+    }
+
+    .select-content * {
+        margin: 5px 0
+    }
 }

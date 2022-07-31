@@ -175,6 +175,10 @@ header .header-content .swiper .swiper-wrapper .swiper-slide .col-second img {
 	color: #000;
 }
 
+.text-gray {
+	color: gray;
+}
+
 .d-inline-block {
 	display: inline-block;
 }
@@ -491,6 +495,19 @@ footer svg {
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 30px;
+}
+
+.text-blue {
+	color: blue;
+}
+
+t {
+	color: red;
+	text-decoration: line-through;
+}
+
+.m-3 {
+	margin: 0 0 25px 30px;
 }
 
 @media screen and (max-width: 1125px) {
