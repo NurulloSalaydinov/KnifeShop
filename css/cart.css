@@ -1,0 +1,9 @@
+header nav {
+    position: fixed;
+    background: #303030 !important;
+}
+
+header {
+    height: auto;
+    padding-bottom: 60px;
+}

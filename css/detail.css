@@ -286,9 +286,30 @@ input, button, a, select, label {
     padding: 30px;
     cursor: pointer;
     background: #eee;
+    position: relative;
     align-items: center;
     justify-content: center;
 }
+
+.same-product-wrapper .same-product-detail .img-content .discount {
+    top: 0;
+    left: 0;
+    color: #fff;
+    padding: 6px 12px;
+    position: absolute;
+    background: #FF6A00;
+    border-bottom-right-radius: 20px;
+}
+
+/* .same-product-wrapper .same-product-detail .img-content .discount::before {
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    border-style: solid;
+	border-width: 55px 70px 0 0;
+	border-color: #FF6A00 transparent transparent transparent;
+} */
 
 .same-product-wrapper .same-product-detail .img-content img {
     width: 100%;
