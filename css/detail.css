@@ -301,16 +301,6 @@ input, button, a, select, label {
     border-bottom-right-radius: 20px;
 }
 
-/* .same-product-wrapper .same-product-detail .img-content .discount::before {
-    top: 0;
-    left: 0;
-    content: "";
-    position: absolute;
-    border-style: solid;
-	border-width: 55px 70px 0 0;
-	border-color: #FF6A00 transparent transparent transparent;
-} */
-
 .same-product-wrapper .same-product-detail .img-content img {
     width: 100%;
     object-fit: contain;

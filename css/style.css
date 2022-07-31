@@ -502,8 +502,13 @@ footer svg {
 }
 
 t {
-	color: red;
+	color: #303030;
 	text-decoration: line-through;
+	text-decoration-color: orange;
+}
+
+.text-orange {
+	color: orange
 }
 
 .m-3 {
