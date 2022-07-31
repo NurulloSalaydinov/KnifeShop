@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap'); */
 
 * {
 	margin: 0;
 	padding: 0;
-	transition: all 0.3s;
+	transition: all 0.4s;
 	text-decoration: none;
 	box-sizing: border-box;
-	font-family: sans-serif;
+	font-family: 'Acme', sans-serif !important;
 }
 
 body {
@@ -64,7 +65,7 @@ header nav .navbar-brand {
 	font-size: 30px;
 	margin-left: 3px;
 	position: absolute;
-	font-family: 'Oleo Script', cursive;
+	font-family: 'Oleo Script', cursive !important;
 }
 
 header nav .navbar-menu {
@@ -321,7 +322,6 @@ header .header-content .swiper .swiper-pagination .swiper-pagination-bullet-acti
 	color: #303030;
 	font-size: 18px;
 	font-weight: 600;
-	font-family: 'Roboto', sans-serif;
 }
 
 .product-wrapper .product .product-body a:hover {

@@ -75,26 +75,26 @@
             <div class="swiper mySwiper2">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="img/main-knife.png" />
+                  <img src="img/product.png" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/main-knife.png" />
+                  <img src="img/product-2.png" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/main-knife.png" />
+                  <img src="img/product.png" />
                 </div>
               </div>
             </div>
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="img/main-knife.png" />
+                  <img src="img/product.png" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/main-knife.png" />
+                  <img src="img/product-2.png" />
                 </div>
                 <div class="swiper-slide">
-                  <img src="img/main-knife.png" />
+                  <img src="img/product.png" />
                 </div>
               </div>
             </div>
@@ -135,7 +135,7 @@
           <div class="tab" id="specific">Specifications</div>
           <div class="tab" id="review">Reviews</div>
         </div>
-        <div class="desc tab-content" data-id="desc">
+        <div class="desc tab-content active" data-id="desc">
           <p>
             This Blade HQ Exclusive Shaman from Spyderco features DLC black-finished CPM-M4 blade steel, black-coated
             steel liners, and green canvas micarta scales. This modern classic is expected to move fast, so don't miss
@@ -202,9 +202,64 @@
             </div>
           </div>
           <form class="review-form">
-            <input type="text" placeholder="Ism Familiya">
+            <input type="text" placeholder="Full Name">
             <textarea name="ckeditor"></textarea>
+            <button class="submit-btn">Post</button>
           </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1>Related Products:</h1>
+        <div class="same-product-wrapper">
+          <div class="same-product-detail">
+            <div class="img-content">
+              <img src="img/product-2.png" alt="Not Found">
+            </div>
+            <div class="body">
+              <a href="#">SAMSUNG <br>Kir yuvish mashinasi</a>
+              <div class="prices">
+                <span class="price">$1200</span>
+                <t>$1400</t>
+              </div>
+            </div>
+          </div>
+          <div class="same-product-detail">
+            <div class="img-content">
+              <img src="img/product-2.png" alt="Not Found">
+            </div>
+            <div class="body">
+              <a href="#">SAMSUNG <br>Kir yuvish mashinasi</a>
+              <div class="prices">
+                <span class="price">$1200</span>
+                <t>$1400</t>
+              </div>
+            </div>
+          </div>
+          <div class="same-product-detail">
+            <div class="img-content">
+              <img src="img/product-2.png" alt="Not Found">
+            </div>
+            <div class="body">
+              <a href="#">SAMSUNG <br>Kir yuvish mashinasi</a>
+              <div class="prices">
+                <span class="price">$1200</span>
+                <t>$1400</t>
+              </div>
+            </div>
+          </div>
+          <div class="same-product-detail">
+            <div class="img-content">
+              <img src="img/product-2.png" alt="Not Found">
+            </div>
+            <div class="body">
+              <a href="#">SAMSUNG <br>Kir yuvish mashinasi</a>
+              <div class="prices">
+                <span class="price">$1200</span>
+                <t>$1400</t>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -331,7 +386,23 @@
             document.body.removeChild(new_element)
           }
         })
-      })
+      });
+
+      var _tabs = document.querySelectorAll('.tab');
+      var _tabContent = document.querySelectorAll('.tab-content');
+      _tabs.forEach(e => {
+        e.onclick = () => {
+          _tabs.forEach(all => {
+            all.classList.remove('active');
+          });
+          _tabContent.forEach(content => {
+            content.classList.remove('active');
+          });
+          e.classList.add('active');
+          var _openContent = document.querySelector(`[data-id=${e.id}]`);
+          _openContent.classList.add('active');
+        };
+      });
     </script>
   </body>
 
