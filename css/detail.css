@@ -3,6 +3,7 @@ header {
 }
 
 nav {
+    position: fixed !important;
     background: #303030 !important;
 }
 

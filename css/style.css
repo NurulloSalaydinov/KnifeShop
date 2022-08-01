@@ -11,6 +11,14 @@
 	font-family: 'Acme', sans-serif !important;
 }
 
+.pointer {
+	cursor: pointer;
+}
+
+input[type=checkbox] {
+	cursor: pointer;
+}
+
 body {
 	width: 100%;
 	height: auto;
@@ -39,15 +47,24 @@ header nav {
 	width: 100%;
 	height: 60px;
 	display: flex;
-	position: fixed;
 	z-index: 1111111;
+	transition: all 1s;
+	position: absolute;
 	align-items: center;
 	justify-content: center;
 	background: transparent;
 }
 
+header nav.hidden-now {
+	position: fixed;
+	transform: translateY(-100px);
+}
+
 header nav.scrolled {
+	height: 60px;
+	position: fixed;
 	background: #303030;
+	transform: translateY(0);
 }
 
 header nav * {
@@ -559,14 +576,16 @@ t {
 	}
 	header nav .navbar-end {
 		left: 0;
-		bottom: 0;
 		width: 100%;
 		height: 50px;
 		display: flex;
-		position: fixed;
 		align-items: center;
 		background: #303030;
+		top: calc(100vh - 50px);
 		justify-content: space-around;
+	}
+	header nav[class="main-navbar hidden-now"] .navbar-end {
+		transform: translateY(200px)
 	}
 	header nav .navbar-end .visible-mobile {
 		display: inline-block;

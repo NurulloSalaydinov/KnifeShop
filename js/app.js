@@ -10,6 +10,30 @@ const NavbarFunction = () => {
 
 NavbarFunction();
 
+const NavbarAnimation = () => {
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (currentScrollPos > 100) {
+        if (prevScrollpos > currentScrollPos) {
+          document.querySelector("nav").classList.add('scrolled');
+        } else {
+          document.querySelector("nav").classList.remove('scrolled')
+        }
+        prevScrollpos = currentScrollPos;
+      } else {
+        document.querySelector("nav").classList.remove('scrolled')
+      }
+      if (window.scrollY > 100) {
+        document.querySelector(".main-navbar").classList.add("hidden-now");
+      } else {
+        document.querySelector(".main-navbar").classList.remove("hidden-now");
+      }
+  };
+};
+
+NavbarAnimation();
+
 const swiper5 = new Swiper(".swiper", {
 	loop: true,
 	autoplay: {
@@ -24,14 +48,6 @@ const swiper5 = new Swiper(".swiper", {
 	      return `<span class="dot swiper-pagination-bullet">0${index + 1}</span>`;
     	},
 	},
-});
-
-window.addEventListener("scroll", (e) => {
-  if (window.scrollY > 30) {
-    document.querySelector("nav").classList.add("scrolled");
-  } else {
-    document.querySelector("nav").classList.remove("scrolled");
-  }
 });
 
 const HeaderContentAnimation = () => {
