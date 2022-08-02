@@ -334,16 +334,6 @@
     <script src="js/swiper.js"></script>
     <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
     <script>
-      var toolbarGroups = [
-        { name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
-        { name: 'styles', groups: [ 'styles' ] },
-        { name: 'colors', groups: [ 'colors' ] },
-        { name: 'tools', groups: [ 'tools' ] },
-      ]
-      CKEDITOR.replace('ckeditor', {
-        toolbar: '',
-        toolbarGroups
-      });
       const NavbarFunction = () => {
         let navbarMenu = document.getElementById("navbar-menu");
         let navbarBurger = document.getElementById("navbar-burger");
@@ -403,6 +393,17 @@
           var _openContent = document.querySelector(`[data-id=${e.id}]`);
           _openContent.classList.add('active');
         };
+      });
+
+      var toolbarGroups = [
+        { name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+        { name: 'styles', groups: [ 'styles' ] },
+        { name: 'colors', groups: [ 'colors' ] },
+        { name: 'tools', groups: [ 'tools' ] },
+      ]
+      CKEDITOR.replace('ckeditor', {
+        toolbar: '',
+        toolbarGroups
       });
     </script>
   </body>
